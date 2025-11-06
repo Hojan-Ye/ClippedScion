@@ -75,9 +75,9 @@ Below are some pseudocode configurations for different architectures and domains
     ```
 - DeiT
     ```python
-        radius = 25
-        threshold = 8000
-        optim_groups = [{
+    radius = 25
+    threshold = 8000
+    optim_groups = [{
         'params': other_params,
         'norm': 'Auto',
         'norm_kwargs': {},
