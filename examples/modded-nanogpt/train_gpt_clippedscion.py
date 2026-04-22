@@ -151,6 +151,7 @@ class ClippedScion(torch.optim.Optimizer):
         defaults = dict(lr=lr, momentum=momentum, scale=scale, rho=rho)
         super().__init__(params, defaults)
         self.ucg_bound = 0
+        print('ClippedScion optimizer initialized')
 
     def step(self):
         self.ucg_bound = 0
@@ -434,7 +435,7 @@ class Hyperparameters:
     n_layer : int = 12
     n_head : int = 6 # set as n_embd/128 so head_dim is 128
     n_embd : int = 768
-    unconstrained = True
+    unconstrained: bool = True
     momentum: float = 0.1
     scale : float = 50
     last_scale : float = 3000
